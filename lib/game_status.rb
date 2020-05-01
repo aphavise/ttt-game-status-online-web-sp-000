@@ -42,10 +42,10 @@ def won?(board)
     end
 end
 
-#
-# def full?(board)
-#   board.none?{|marker| marker = " "}
-# end
+
+def full?(board)
+  board.none?{|marker| marker == " "}
+end
 
 def draw?(board)
   !won?(board) && full?(board)
