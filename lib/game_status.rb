@@ -24,7 +24,7 @@ WIN_COMBINATIONS = [
 def won?(board)
   # binding.pry
   won_check = false
-  WIN_COMBINATIONS.each do |combination|
+    WIN_COMBINATIONS.each do |combination|
 
         first_index = combination[0]
         second_index = combination[1]
