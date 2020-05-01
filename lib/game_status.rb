@@ -46,9 +46,7 @@ end
 
 
 def full?(board)
-  board.none? do |marker|
-    marker == "X" || marker == "O"
-    return true 
+  board.none? {|letter|  letter = " "}
   end
 end
 
