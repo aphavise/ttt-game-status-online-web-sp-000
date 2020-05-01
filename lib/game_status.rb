@@ -15,7 +15,7 @@ WIN_COMBINATIONS = [
   [1,4,7], # Middle Column
   [2,5,8], # Right Column
   [0,4,8], # 1st diagonal
-  [2,4,6], # 2nd diagonal
+  [2,4,6] # 2nd diagonal
   # ETC, an array for each win combination
 ]
 
