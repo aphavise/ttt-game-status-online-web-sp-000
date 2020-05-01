@@ -7,7 +7,7 @@ end
 
 # Define your WIN_win_combinationS constant
 
-WIN_win_combinationS = [
+WIN_COMBINATIONS = [
   [0,1,2], # Top row
   [3,4,5], # Middle row
   [6,7,8], # Bottom row
