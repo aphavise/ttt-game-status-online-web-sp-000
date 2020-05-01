@@ -39,12 +39,12 @@ def won?(board)
           check = true
        end
     end
-  check 
+  check
 end
 
 
 def full?(board)
-  board.all?{|mark| mark == "X" || mark == "O"}
+  board.none?{|mark| mark == " "}
 end
 
 def draw?(board)
