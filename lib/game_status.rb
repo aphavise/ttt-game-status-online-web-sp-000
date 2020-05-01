@@ -25,9 +25,9 @@ def won?(board)
   # binding.pry
     WIN_COMBINATIONS.each do |win_combination|
 
-        first_index = win_win_combination[0]
-        second_index = win_win_combination[1]
-        third_index = win_win_combination[2]
+        first_index = win_combination[0]
+        second_index = win_combination[1]
+        third_index = win_combination[2]
 
         position_1 = board[first_index]
         position_2 = board[second_index]
