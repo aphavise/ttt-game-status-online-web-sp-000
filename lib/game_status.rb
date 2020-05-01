@@ -7,8 +7,6 @@ end
 
 # Define your WIN_COMBINATIONS constant
 
-
-
 WIN_COMBINATIONS = [
   [0,1,2], # Top row
   [3,4,5], # Middle row
@@ -25,21 +23,19 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   # binding.pry
+  WIN_COMBINATIONS.each do |combination|
 
-   WIN_COMBINATIONS.each do |win_combination|
-
-        first_index = win_combination[0]
-        second_index = win_combination[1]
-        third_index = win_combination[2]
+        first_index = combination[0]
+        second_index = combination[1]
+        third_index = combination[2]
 
         position_1 = board[first_index]
         position_2 = board[second_index]
         position_3 = board[third_index]
 
-
        if (position_1 == "X"  && position_2 == "X" && position_3 == "X") ||
           (position_1 == "0"  && position_2 == "O" && position_3 == "O")
-          return win_combination
+          return combination
           won = true
        end
     end
