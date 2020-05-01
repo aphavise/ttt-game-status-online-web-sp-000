@@ -21,66 +21,45 @@ WIN_COMBINATIONS = [
 
 # board = ["X", "X", "X", "O", "O", " ", " ", " ", " "]
 
-# def won?(board)
-#   # binding.pry
-#   won_check = false
-#     WIN_COMBINATIONS.each do |combination|
-#
-#         first_index = combination[0]
-#         second_index = combination[1]
-#         third_index = combination[2]
-#
-#         position_1 = board[first_index]
-#         position_2 = board[second_index]
-#         position_3 = board[third_index]
-#
-#        if (position_1 == "X"  && position_2 == "X" && position_3 == "X") ||
-#           (position_1 == "0"  && position_2 == "O" && position_3 == "O")
-#           return combination
-#           won_check = true
-#        end
-#     end
-#   won_check
-# end
-
 def won?(board)
+  # binding.pry
   won_check = false
     WIN_COMBINATIONS.each do |combination|
 
-      first_index = combination[0]
-      second_index = combination[1]
-      third_index = combination[2]
+        first_index = combination[0]
+        second_index = combination[1]
+        third_index = combination[2]
 
-      position_1 = board[first_index]
-      position_2 = board[second_index]
-      position_3 = board[third_index]
+        position_1 = board[first_index]
+        position_2 = board[second_index]
+        position_3 = board[third_index]
 
-
-      if (position_1 == "X" && position_2 == "X" && position_3 == "X" ) ||
-         (position_1 == "O" && position_2 == "O" && position_3 == "O" )
+       if (position_1 == "X"  && position_2 == "X" && position_3 == "X") ||
+          (position_1 == "O"  && position_2 == "O" && position_3 == "O")
           return combination
           won_check = true
-      end
+       end
     end
   won_check
 end
 
-def full?(board)
-  board.none? do |marker|
-    marker == "X" || marker == "O"
-  end
-end
-
-def draw?(board)
-  !won?(board) && full?(board)
-end
-
-def over?(board)
-  won?(board) || draw?(board)
-end
-
-def winner(board)
-  if win_array = won?(board)
-    board[win_array.first]
-  end
-end
+#
+# def full?(board)
+#   board.none? do |marker|
+#     marker == "X" || marker == "O"
+#   end
+# end
+#
+# def draw?(board)
+#   !won?(board) && full?(board)
+# end
+#
+# def over?(board)
+#   won?(board) || draw?(board)
+# end
+#
+# def winner(board)
+#   if win_array = won?(board)
+#     board[win_array.first]
+#   end
+# end
