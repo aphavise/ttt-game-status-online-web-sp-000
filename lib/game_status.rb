@@ -23,7 +23,7 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   # binding.pry
-  win_game = false
+  # win_game = false
     WIN_COMBINATIONS.each do |win_combination|
 
         first_index = win_combination[0]
@@ -37,29 +37,31 @@ def won?(board)
        if (position_1 == "X"  && position_2 == "X" && position_3 == "X") ||
           (position_1 == "O"  && position_2 == "O" && position_3 == "O")
           return win_combination
-          win_game = true
+          # win_game = true
+      else 
+        false
        end
     end
-  win_game
+  # win_game
 end
 
-#
-# def full?(board)
-#   board.none? do |marker|
-#     marker == "X" || marker == "O"
-#   end
-# end
-#
-# def draw?(board)
-#   !won?(board) && full?(board)
-# end
-#
-# def over?(board)
-#   won?(board) || draw?(board)
-# end
-#
-# def winner(board)
-#   if win_array = won?(board)
-#     board[win_array.first]
-#   end
-# end
+
+def full?(board)
+  board.none? do |marker|
+    marker == "X" || marker == "O"
+  end
+end
+
+def draw?(board)
+  !won?(board) && full?(board)
+end
+
+def over?(board)
+  won?(board) || draw?(board)
+end
+
+def winner(board)
+  if win_array = won?(board)
+    board[win_array.first]
+  end
+end
