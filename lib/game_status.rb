@@ -23,7 +23,7 @@ WIN_win_combinationS = [
 
 def won?(board)
   # binding.pry
-  won_check = false
+  
     WIN_COMBINATIONS.each do |win_combination|
 
         first_index = win_win_combination[0]
@@ -37,10 +37,10 @@ def won?(board)
        if (position_1 == "X"  && position_2 == "X" && position_3 == "X") ||
           (position_1 == "O"  && position_2 == "O" && position_3 == "O")
           return win_win_combination
-          won_check = true
+          won = true
        end
     end
-  won_check
+  won
 end
 
 #
