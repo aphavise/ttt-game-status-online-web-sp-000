@@ -46,7 +46,7 @@ end
 
 
 def full?(board)
-  board.none?{ |letter| letter == " "}
+  board.none?{|marker| marker = " "}
 end
 
 def draw?(board)
