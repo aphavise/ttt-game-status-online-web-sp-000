@@ -43,23 +43,23 @@ def won?(board)
   won_check
 end
 
-#
-# def full?(board)
-#   board.none? do |marker|
-#     marker == "X" || marker == "O"
-#   end
-# end
-#
-# def draw?(board)
-#   !won?(board) && full?(board)
-# end
-#
-# def over?(board)
-#   won?(board) || draw?(board)
-# end
-#
-# def winner(board)
-#   if win_array = won?(board)
-#     board[win_array.first]
-#   end
-# end
+
+def full?(board)
+  board.none? do |marker|
+    marker == "X" || marker == "O"
+  end
+end
+
+def draw?(board)
+  !won?(board) && full?(board)
+end
+
+def over?(board)
+  won?(board) || draw?(board)
+end
+
+def winner(board)
+  if win_array = won?(board)
+    board[win_array.first]
+  end
+end
