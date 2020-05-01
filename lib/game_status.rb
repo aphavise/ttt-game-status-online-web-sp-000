@@ -44,7 +44,7 @@ end
 
 
 def full?(board)
-  board.all?{|token| token == "X" || token == "O"}
+  board.all?{|mark| mark == "X" || mark == "O"}
 end
 
 def draw?(board)
