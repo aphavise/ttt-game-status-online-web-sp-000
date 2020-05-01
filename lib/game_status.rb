@@ -5,9 +5,9 @@ def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
 end
 
-# Define your WIN_COMBINATIONS constant
+# Define your WIN_win_combinationS constant
 
-WIN_COMBINATIONS = [
+WIN_win_combinationS = [
   [0,1,2], # Top row
   [3,4,5], # Middle row
   [6,7,8], # Bottom row
@@ -16,7 +16,7 @@ WIN_COMBINATIONS = [
   [2,5,8], # Right Column
   [0,4,8], # 1st diagonal
   [2,4,6] # 2nd diagonal
-  # ETC, an array for each win combination
+  # ETC, an array for each win win_combination
 ]
 
 # board = ["X", "X", "X", "O", "O", " ", " ", " ", " "]
@@ -24,11 +24,11 @@ WIN_COMBINATIONS = [
 def won?(board)
   # binding.pry
   won_check = false
-    WIN_COMBINATIONS.each do |combination|
+    WIN_COMBINATIONS.each do |win_combination|
 
-        first_index = combination[0]
-        second_index = combination[1]
-        third_index = combination[2]
+        first_index = win_win_combination[0]
+        second_index = win_win_combination[1]
+        third_index = win_win_combination[2]
 
         position_1 = board[first_index]
         position_2 = board[second_index]
@@ -36,7 +36,7 @@ def won?(board)
 
        if (position_1 == "X"  && position_2 == "X" && position_3 == "X") ||
           (position_1 == "O"  && position_2 == "O" && position_3 == "O")
-          return combination
+          return win_win_combination
           won_check = true
        end
     end
